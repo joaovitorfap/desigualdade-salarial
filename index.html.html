@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auxilio no estudo da desigualdade salarial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .theme-light {
+            background-color: #D8D8D8; 
+            color: #544AD1;
+        }
+
+        .theme-light .header,
+        .theme-light .footer {
+            background-color: #F0ECEF;
+            color: #544AD1;
+        }
+
+        .theme-light .dashboard-text {
+            color: #544AD1;
+        }
+
+        .theme-dark {
+            background-color: #29333A; 
+            color: #544AD1;
+        }
+
+        .theme-dark .header,
+        .theme-dark .footer {
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: #544AD1;
+        }
+
+        .theme-dark .dashboard-text {
+            color: #9AA2DE;
+        }
+
+        .header, .footer {
+            padding: 20px;
+            text-align: left;
+            backdrop-filter: blur(5px); 
+            position: relative;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 95%;
+            padding-bottom: 60%;
+            border-radius: 5px;
+            overflow: hidden; 
+            margin-bottom: 20px; 
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; 
+        }
+
+        .dashboard-text {
+            font-size: 16px;
+            text-align: left;
+            margin: 0 20px; 
+            line-height: 1.6; 
+        }
+
+        .theme-toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold; /* Negrito */
+        }
+
+        .theme-light .theme-toggle-button {
+            background-color: #D8D8D8;
+            color: #544AD1;
+        }
+
+        .theme-dark .theme-toggle-button {
+            background-color: #544AD1;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="theme-dark">
+    <div class="header">
+        <h1>Auxilio no estudo da desigualdade salarial</h1>
+        <button class="theme-toggle-button" onclick="toggleTheme()">Alternar Tema</button>
+    </div>
+    <div class="container">
+        <div class="iframe-container">
+            <iframe id="dashboard-iframe" title="DASHBOARD PI" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTc3NDU3ZWQtNWY2Yi00Mjk1LTg0MjUtMDMxN2IzZDI5NjdlIiwidCI6ImYyYzEyMzcyLWVlYWUtNDFhNC1hMDgwLWMyOTM2ZjNlZTQ1NSJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe> 
+        </div>
+        <div class="dashboard-text">
+            <p>Este dashboard apresenta um panorama da desigualdade salarial, revelando disparidades significativas em diversos recortes, como faixa etária, sexo, raça, área de atuação e tipo de trabalho.</p>
+            <p><strong>Faixa Etária:</strong> Observa-se uma clara tendência de aumento salarial com a idade, atingindo o pico na faixa de 43 a 47 anos (R$ 9,15 mil) e diminuindo a partir daí. As faixas etárias (18-22) e a partir de (48-52) apresentam as menores médias salariais, evidenciando a necessidade de políticas que promovam a inclusão e o desenvolvimento profissional dos jovens e de trabalhadores em fase de recolocação.</p>
+            <p><strong>Sexo:</strong> A disparidade salarial entre homens e mulheres é gritante. Enquanto a média salarial masculina é de R$ 5,5 mil, a feminina se limita a R$ 3,9 mil, representando uma diferença de 29%. Essa disparidade reforça a urgência na implementação de medidas que promovam a equidade salarial entre os gêneros.</p>
+            <p><strong>Raça:</strong> As disparidades salariais também se manifestam com base na raça. A média salarial de pessoas brancas (R$ 6,2 mil) é significativamente superior à de pessoas negras (R$ 3,8 mil) e pardas (R$ 3,2 mil), confirmando o persistente racismo estrutural que impacta as oportunidades e remuneração da população negra e parda.</p>
+            <p><strong>Área de Atuação:</strong> As áreas de Saúde e TI lideram o ranking salarial com médias iguais de R$ 8,1 mil. Por outro lado, setores como Educação e Administrativo apresentam as menores médias salariais, evidenciando a necessidade de valorização e investimento em áreas essenciais para o desenvolvimento social.</p>
+            <p><strong>Tipo de Trabalho:</strong> O trabalho híbrido desponta com a maior média salarial (R$ 6,9 mil), seguido pelo trabalho remoto (R$ 5,9 mil) e presencial (R$ 4,2 mil). A predominância de trabalho híbrido em cargos com maior remuneração sugere uma possível correlação entre flexibilidade e melhores salários.</p>
+            <p>Em suma, o dashboard ilustra um cenário preocupante de desigualdade salarial no Brasil, impactado por fatores como idade, sexo, raça, área de atuação e tipo de trabalho. 
+A análise desses dados reforça a necessidade de ações efetivas para combater as disparidades e promover a igualdade de oportunidades no mercado de trabalho. Políticas públicas, iniciativas privadas e o engajamento da sociedade são cruciais para a construção de um futuro mais justo e equitativo.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Agner José Honorato Novak, Igor Batista de Almeida, João Guilherme Magalhães, João Manoel de Oliveira Veras, João Vitor Ferreira Azevedo Pereira, João Vítor Gonçalves dos Santos</p>
+    </div>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const iframe = document.getElementById('dashboard-iframe');
+            body.classList.toggle('theme-dark');
+            body.classList.toggle('theme-light');
+            
+            if (body.classList.contains('theme-dark')) {
+                iframe.src = 'https://app.powerbi.com/view?r=eyJrIjoiZTc3NDU3ZWQtNWY2Yi00Mjk1LTg0MjUtMDMxN2IzZDI5NjdlIiwidCI6ImYyYzEyMzcyLWVlYWUtNDFhNC1hMDgwLWMyOTM2ZjNlZTQ1NSJ9&pageName=ReportSection';
+            } else {
+                iframe.src = 'https://app.powerbi.com/view?r=eyJrIjoiZTc3NDU3ZWQtNWY2Yi00Mjk1LTg0MjUtMDMxN2IzZDI5NjdlIiwidCI6ImYyYzEyMzcyLWVlYWUtNDFhNC1hMDgwLWMyOTM2ZjNlZTQ1NSJ9&pageName=ReportSectione1e323e238c9e3b8d720';
+            }
+        }
+    </script>
+</body>
+</html>
